@@ -5,3 +5,4 @@ Group 3:
 Sebastian Montero Paris
 Demetris Perdikos
 Clelia Cervetto
+Conrad Lee
