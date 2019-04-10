@@ -1,2 +1,4 @@
-class DataFrame:
-    def __init__(self)
+import numpy as np
+
+class DataFrame():
+    
