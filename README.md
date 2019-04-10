@@ -2,7 +2,11 @@
 This is the Advanced Python Project
 
 Group 3:
-Sebastian Montero Paris, Clelia Cervetto
+
+Sebastian Montero Paris
+Demetris Perdikos 2
+Clelia Cervetto
+Conrad Lee
 
 ie_pandas is a Python library for dealing with Data Frames operations.
 
@@ -37,4 +41,3 @@ Ignoring the non-numerical columns, these methods return a list of values corres
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
-
