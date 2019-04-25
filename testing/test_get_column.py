@@ -1,0 +1,18 @@
+from ie_pandas import dataframe
+
+
+def test_get_column():
+
+    dictionary = {"column 1": [1, 2, 3, 4],
+                  "column 2": [5, 6, 7, 8]}
+
+    df = dataframe(dictionary)
+
+    answer = df.get_column('column 1')
+
+    expected_answer = [1, 2, 3, 4]
+
+    assert answer == expected_answer
+
+
+test_get_column()
