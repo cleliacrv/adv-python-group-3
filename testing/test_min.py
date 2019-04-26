@@ -13,6 +13,3 @@ def test_min_numbers():
     expected_answer = [1, 5]
 
     assert answer == expected_answer
-
-
-test_min_numbers()

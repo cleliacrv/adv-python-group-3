@@ -13,6 +13,3 @@ def test_get_column():
     expected_answer = [1, 2, 3, 4]
 
     assert answer == expected_answer
-
-
-test_get_column()

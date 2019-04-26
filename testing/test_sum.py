@@ -13,6 +13,3 @@ def test_sum_numbers():
     expected_answer = [10, 26]
 
     assert answer == expected_answer
-
-
-test_sum_numbers()
