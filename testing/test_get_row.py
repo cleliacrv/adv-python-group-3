@@ -13,6 +13,3 @@ def test_get_row():
     expected_answer = [1, 5]
 
     assert answer == expected_answer
-
-
-test_get_row()
