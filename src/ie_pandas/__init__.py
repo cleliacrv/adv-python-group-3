@@ -4,16 +4,64 @@ import numpy as np
 class dataframe:
     def __init__(self, dic):
         self.dictionary = dic
-        self.columns = list(dic.keys())
-        self.values = list(dic.values())
+        self.columns = list(self.dictionary.keys())
+        self.values = list(self.dictionary.values())
+        
+    def __repr__(self):
+        return repr(self.styling)
+    
+    def __getitem__(self, item):
+        result = []
+        if isinstance(item, list):
+            for i in item:
+                result.append(np.asarray(self.dictionary[i]).astype(np.object))
+            return(np.column_stack(result))
+        elif isinstance(item, slice):
+            for i in range(item.start, item.stop):
+                result.append(self.get_row(i))
+            return(np.vstack(result))
+        elif isinstance(item, int):
+            print(type(item))
+        else:
+            return(np.asarray(self.dictionary[item]))
 
+    def __setitem__(self, item, value):
+        self.dictionary[item] = value
+        
+    def __delitem__(self, item):
+        if isinstance(item, (int, slice)):
+            print(type(item))
+        del self.dictionary[item]
+    
+    @property
+    def styling(self):
+        self.columns = list(self.dictionary.keys())
+        self.values = list(self.dictionary.values())
         data = []
         for column, value in zip(self.columns, self.values):
             col_list = [column]
             col_list.extend(value)
             data.append(col_list)
-        print(np.column_stack(data))
-
+        result = np.column_stack(data)
+        return result
+    
+    def get_row(self, row_index):
+        result = []
+        for value in self.values:
+            result.append(value[row_index])
+        return result
+    
+    def get_column(self, col_index):
+        counter = 0
+        if str(type(col_index)) == "<class 'int'>":
+            result = self.values[col_index]
+        elif str(type(col_index)) == "<class 'str'>":
+            for column in self.columns:
+                if column == col_index:
+                    result = self.values[counter]
+                counter = counter + 1
+        return result
+    
     def sum(self):
         result = []
         for column in self.columns:
@@ -52,21 +100,4 @@ class dataframe:
             else:
                 min_numbers = np.min(self.dictionary[column])
                 result.append(min_numbers)
-        return result
-
-    def get_row(self, row_index):
-        result = []
-        for value in self.values:
-            result.append(value[row_index])
-        return result
-    
-    def get_column(self, col_index):
-        counter = 0
-        if str(type(col_index)) == "<class 'int'>":
-            result = self.values[col_index]
-        elif str(type(col_index)) == "<class 'str'>":
-            for column in self.columns:
-                if column == col_index:
-                    result = self.values[counter]
-                counter = counter + 1
-        return result
+        return result   
