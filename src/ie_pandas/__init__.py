@@ -121,3 +121,23 @@ class dataframe:
                 a = np.unique(self.dictionary[column], return_counts=True)
                 result.append(a[0][np.argmax(a[1])])
         return result
+    
+    def std(self):
+        result = []
+        for column in self.columns:
+            if str(type(self.dictionary[column][0])) == "<class 'str'>":
+                pass
+            else:
+                std_numbers = np.std(self.dictionary[column])
+                result.append(std_numbers)
+        return result
+
+    def var(self):
+        result = []
+        for column in self.columns:
+            if str(type(self.dictionary[column][0])) == "<class 'str'>":
+                pass
+            else:
+                var_numbers = np.var(self.dictionary[column])
+                result.append(var_numbers)
+        return result
