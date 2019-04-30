@@ -13,3 +13,6 @@ def test_sum_numbers_avoid_nonnumerical():
     expected_answer = [10]
 
     assert answer == expected_answer
+
+
+test_sum_numbers_avoid_nonnumerical()

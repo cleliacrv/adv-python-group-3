@@ -13,3 +13,6 @@ def test_median_numbers():
     expected_answer = [2.5, 6.5]
 
     assert answer == expected_answer
+
+
+test_median_numbers()
