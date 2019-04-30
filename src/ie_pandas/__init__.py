@@ -7,7 +7,7 @@ class dataframe:
         '''
         This is a docstring to explain the __init__
         '''
-
+        
         self.dictionary = dic
         self.columns = list(self.dictionary.keys())
         self.values = list(self.dictionary.values())
@@ -50,13 +50,31 @@ class dataframe:
         result = np.column_stack(data)
         return result
 
+       
     def get_row(self, row_index):
+
+    	'''
+        function to call specific row
+        by index
+
+        '''
         result = []
         for value in self.values:
             result.append(value[row_index])
         return result
 
+
+
+
+        
+
+
     def get_column(self, col_index):
+    	'''
+        function to call specific column
+        by index
+
+        '''
         counter = 0
         if str(type(col_index)) == "<class 'int'>":
             result = self.values[col_index]
@@ -67,7 +85,15 @@ class dataframe:
                 counter = counter + 1
         return result
 
+        
+
     def sum(self):
+    	'''
+        function to get the sum
+        of every column
+        with numerical values
+
+        '''
         result = []
         for column in self.columns:
             if str(type(self.dictionary[column][0])) == "<class 'str'>":
@@ -78,6 +104,12 @@ class dataframe:
         return result
 
     def median(self):
+    	'''
+        function to get the median
+        of every column
+        with numerical values
+
+        '''
         result = []
         for column in self.columns:
             if str(type(self.dictionary[column][0])) == "<class 'str'>":
@@ -88,6 +120,12 @@ class dataframe:
         return result
 
     def max(self):
+    	'''
+        function to get the maximum value
+        of every column
+        with numerical values
+
+        '''
         result = []
         for column in self.columns:
             if str(type(self.dictionary[column][0])) == "<class 'str'>":
@@ -98,6 +136,12 @@ class dataframe:
         return result
 
     def min(self):
+    	'''
+        function to get the minimum value
+        of every column
+        with numerical values
+
+        '''
         result = []
         for column in self.columns:
             if str(type(self.dictionary[column][0])) == "<class 'str'>":
@@ -108,6 +152,12 @@ class dataframe:
         return result
 
     def mean(self):
+    	'''
+        function to get the mean/average
+        of every column
+        with numerical values
+
+        '''
         result = []
         for column in self.columns:
             if str(type(self.dictionary[column][0])) == "<class 'str'>":
@@ -118,6 +168,12 @@ class dataframe:
         return result
 
     def mode(self):
+    	'''
+        function to get the mode
+        of every column
+        with numerical values
+
+        '''
         result = []
         for column in self.columns:
             if str(type(self.dictionary[column][0])) == "<class 'str'>":
@@ -128,6 +184,12 @@ class dataframe:
         return result
     
     def std(self):
+    	'''
+        function to get the standard deviation
+        of every column
+        with numerical values
+
+        '''
         result = []
         for column in self.columns:
             if str(type(self.dictionary[column][0])) == "<class 'str'>":
@@ -138,6 +200,12 @@ class dataframe:
         return result
 
     def var(self):
+    	'''
+        function to get the variance
+        of every column
+        with numerical values
+
+        '''
         result = []
         for column in self.columns:
             if str(type(self.dictionary[column][0])) == "<class 'str'>":
