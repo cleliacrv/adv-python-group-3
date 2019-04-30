@@ -3,6 +3,11 @@ import numpy as np
 
 class dataframe:
     def __init__(self, dic):
+
+        '''
+        This is a docstring to explain the __init__
+        '''
+
         self.dictionary = dic
         self.columns = list(self.dictionary.keys())
         self.values = list(self.dictionary.values())
