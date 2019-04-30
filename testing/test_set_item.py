@@ -1,6 +1,7 @@
 from ie_pandas import dataframe
 import numpy as np
 
+
 def test_set_item():
 
     dictionary = {"c1": [1, 2, 3, 4],
@@ -15,3 +16,6 @@ def test_set_item():
     expected_answer = np.asarray([1, 0, 0, 0])
 
     assert np.all(answer == expected_answer)
+
+
+test_set_item()

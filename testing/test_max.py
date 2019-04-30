@@ -13,3 +13,6 @@ def test_max_numbers():
     expected_answer = [4, 8]
 
     assert answer == expected_answer
+
+
+test_max_numbers()

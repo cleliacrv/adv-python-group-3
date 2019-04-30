@@ -9,13 +9,16 @@ def test_del_item():
                   "c4": [True, False, True, False]}
 
     df = dataframe(dictionary)
-    
+
     del df['c1']
     try:
         df['c1']
     except Exception:
         answer = True
-    
+
     expected_answer = True
 
     assert answer == expected_answer
+
+
+test_del_item()
