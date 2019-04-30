@@ -17,7 +17,7 @@ class dataframe:
 
     def __getitem__(self, item):
         result = []
-        if isinstance(item, list):
+        if isinstance(items, list):
             for i in item:
                 result.append(np.asarray(self.dictionary[i]).astype(np.object))
             return(np.column_stack(result))
