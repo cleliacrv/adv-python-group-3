@@ -6,10 +6,10 @@ class dataframe:
         self.dictionary = dic
         self.columns = list(self.dictionary.keys())
         self.values = list(self.dictionary.values())
-        
+
     def __repr__(self):
         return repr(self.styling)
-    
+
     def __getitem__(self, item):
         result = []
         if isinstance(item, list):
@@ -27,12 +27,12 @@ class dataframe:
 
     def __setitem__(self, item, value):
         self.dictionary[item] = value
-        
+
     def __delitem__(self, item):
         if isinstance(item, (int, slice)):
             print(type(item))
         del self.dictionary[item]
-    
+
     @property
     def styling(self):
         self.columns = list(self.dictionary.keys())
@@ -44,13 +44,13 @@ class dataframe:
             data.append(col_list)
         result = np.column_stack(data)
         return result
-    
+
     def get_row(self, row_index):
         result = []
         for value in self.values:
             result.append(value[row_index])
         return result
-    
+
     def get_column(self, col_index):
         counter = 0
         if str(type(col_index)) == "<class 'int'>":
@@ -61,7 +61,7 @@ class dataframe:
                     result = self.values[counter]
                 counter = counter + 1
         return result
-    
+
     def sum(self):
         result = []
         for column in self.columns:
@@ -100,11 +100,10 @@ class dataframe:
             else:
                 min_numbers = np.min(self.dictionary[column])
                 result.append(min_numbers)
-        return result   
-
+        return result
 
     def mean(self):
-        result=[]
+        result = []
         for column in self.columns:
             if str(type(self.dictionary[column][0])) == "<class 'str'>":
                 pass
@@ -113,14 +112,12 @@ class dataframe:
                 result.append(mean_numbers)
         return result
 
-
-
     def mode(self):
-        result=[]
+        result = []
         for column in self.columns:
             if str(type(self.dictionary[column][0])) == "<class 'str'>":
                 pass
             else:
-                a=np.unique(self.dictionary[column],return_counts=True)
+                a = np.unique(self.dictionary[column], return_counts=True)
                 result.append(a[0][np.argmax(a[1])])
         return result
