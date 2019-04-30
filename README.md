@@ -23,23 +23,28 @@ pip install ie_pandas
 ## Usage
 
 ```python
-from ie_pandas import DataFrame
+from ie_pandas import dataframe
 ```
 Methods:
 
 ```python
-DataFrame.sum()
-DataFrame.median()
-DataFrame.min()
-DataFrame.max()
+df.sum()
+df.median()
+df.min()
+df.max()
+df.mode()
+df.mean()
+df.std()
+df.var()
 ```
 
 Ignoring the non-numerical columns, these methods return a list of values corresponding to applying the function to each numerical column. 
 
 ```python
 .get_row(index) 
+.get_column(index)
 ```
-Returns a list of values corresponding to the row
+Returns a list of values corresponding to the row/column.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
