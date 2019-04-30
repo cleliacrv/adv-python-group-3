@@ -13,9 +13,20 @@ class dataframe:
         self.values = list(self.dictionary.values())
 
     def __repr__(self):
+        '''
+        defines the behaviour
+        when the dataframe
+        is called
+        '''
         return repr(self.styling)
 
     def __getitem__(self, item):
+        '''
+        Defines behavior for when 
+        an item is accessed, 
+        using the notation self[key]. 
+        '''
+
         result = []
         if isinstance(items, list):
             for i in item:
@@ -31,15 +42,28 @@ class dataframe:
             return(np.asarray(self.dictionary[item]))
 
     def __setitem__(self, item, value):
+        '''
+        Defines behavior for when
+        an item is assigned to,
+        using the notation self[nkey] = value. 
+        '''
         self.dictionary[item] = value
 
     def __delitem__(self, item):
+        '''
+        Defines behavior for when
+        an item is deleted (e.g. del self[key])
+        '''
         if isinstance(item, (int, slice)):
             print(type(item))
         del self.dictionary[item]
 
     @property
     def styling(self):
+        '''
+        Defines behavior for when
+        an item is deleted (e.g. del self[key])
+        '''
         self.columns = list(self.dictionary.keys())
         self.values = list(self.dictionary.values())
         data = []
