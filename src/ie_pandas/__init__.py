@@ -229,3 +229,19 @@ class dataframe:
                 var_numbers = np.var(self.dictionary[column])
                 result.append(var_numbers)
         return result
+    
+    def range(self):
+        '''
+        function to get the range 
+        defined as maximum value - minimum value
+        of every column
+        with numerical values
+        '''
+        result = []
+        for column in self.columns:
+            if str(type(self.dictionary[column][0])) == "<class 'str'>":
+                pass
+            else:
+                range_numbers = np.ptp(self.dictionary[column])
+                result.append(range_numbers)
+        return result
