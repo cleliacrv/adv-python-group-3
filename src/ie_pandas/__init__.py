@@ -1,5 +1,5 @@
 import numpy as np
-
+import matplotlib.pyplot as plt
 
 class dataframe:
     def __init__(self, dic):
@@ -245,3 +245,19 @@ class dataframe:
                 range_numbers = np.ptp(self.dictionary[column])
                 result.append(range_numbers)
         return result
+    
+    def plot(self):
+        '''
+        function to perform simple 
+        visualizations with matplotlib
+        subplots
+        
+        '''
+        result = []
+        for column in self.columns:
+            if str(type(self.dictionary[column][0])) == "<class 'str'>":
+                pass
+            else:
+                fig, ax = plt.subplots()
+                ax.plot(df[column])
+                ax.set(xlabel="x", ylabel="y")
