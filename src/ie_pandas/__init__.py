@@ -30,7 +30,7 @@ class dataframe:
         '''
 
         result = []
-        if isinstance(items, list):
+        if isinstance(item, list):
             for i in item:
                 result.append(np.asarray(self.dictionary[i]).astype(np.object))
             return(np.column_stack(result))
