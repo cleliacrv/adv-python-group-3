@@ -1,5 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from prettytable import PrettyTable
+
 
 class dataframe:
     def __init__(self, dic):
@@ -45,7 +47,7 @@ class dataframe:
         '''
         Defines behavior for when
         an item is assigned to,
-        using the notation self[nkey] = value. 
+        using the notation self[nkey] = value.
         '''
         self.dictionary[item] = value
 
