@@ -1,5 +1,6 @@
 # DataFrame library
 This is the Advanced Python Project for the elective in the Master of Business Analytics and Big Data.
+Documentation for the library is also available as a Sphinx-generated html file under the docs/build/html/Index.html
 
 Group 3:
 
@@ -14,7 +15,7 @@ ie_pandas is a Python library for dealing with Data Frames operations.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install ie_pandas.
 
 ```bash
 pip install ie_pandas
