@@ -6,3 +6,5 @@ test_data = {"column 1": [1, 2, 3, 4, 5],
              "column 4": [16, 17, 18, 19, 20]}
 
 df = dataframe(test_data)
+
+print(df)

@@ -1,5 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from prettytable import PrettyTable
+
 
 class dataframe:
     def __init__(self, dic):
@@ -45,7 +47,7 @@ class dataframe:
         '''
         Defines behavior for when
         an item is assigned to,
-        using the notation self[nkey] = value. 
+        using the notation self[nkey] = value.
         '''
         self.dictionary[item] = value
 
@@ -61,18 +63,12 @@ class dataframe:
     @property
     def styling(self):
         '''
-        Defines behavior for when
-        an item is deleted (e.g. del self[key])
+        Vizualise the table
         '''
-        self.columns = list(self.dictionary.keys())
-        self.values = list(self.dictionary.values())
-        data = []
-        for column, value in zip(self.columns, self.values):
-            col_list = [column]
-            col_list.extend(value)
-            data.append(col_list)
-        result = np.column_stack(data)
-        return result
+        table = PrettyTable()
+        for key, val in sorted(self.dictionary.items()):
+            table.add_column(key, val)
+        print(table)
 
     def get_row(self, row_index):
 
