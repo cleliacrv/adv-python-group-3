@@ -1,5 +1,6 @@
 # DataFrame library
 This is the Advanced Python Project for the elective in the Master of Business Analytics and Big Data.
+
 Documentation for the library is also available as a Sphinx-generated html file under the docs/build/html/Index.html
 
 Group 3:
