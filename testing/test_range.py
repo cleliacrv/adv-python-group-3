@@ -13,3 +13,5 @@ def test_range_numbers():
     expected_answer = [3, 3]
 
     assert answer == expected_answer
+
+test_range_numbers()
