@@ -36,6 +36,7 @@ df.mode()
 df.mean()
 df.std()
 df.var()
+df.range()
 ```
 
 Ignoring the non-numerical columns, these methods return a list of values corresponding to applying the function to each numerical column. 
@@ -45,6 +46,11 @@ Ignoring the non-numerical columns, these methods return a list of values corres
 .get_column(index)
 ```
 Returns a list of values corresponding to the row/column.
+
+The library also supports basic visualization functionalities (subplots) by passing the dataframe into plot(): 
+```python
+plot(df)
+```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
