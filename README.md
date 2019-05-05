@@ -58,3 +58,11 @@ plot(df)
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
+
+
+## References and credits
+
+In order to build/debug our code we found help at the following pages which we should credit:
+https://rszalski.github.io/magicmethods/
+https://www.journaldev.com/14893/python-property-decorator
+https://riptutorial.com/python/example/1571/indexing-custom-classes----getitem------setitem---and---delitem--
