@@ -14,4 +14,4 @@ def test_range_numbers():
 
     assert answer == expected_answer
 
-test_get_column()
+test__range_numbers()
